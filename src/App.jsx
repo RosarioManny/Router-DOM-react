@@ -1,7 +1,15 @@
-// src/App.jsx
+import PokemonList from "./components/PokemonList";
+import { useState } from 'react'
+import InitialState from './InitialState'
 
 const App = () => {
-  return <h1>Hello world!</h1>;
+  const [pokemon, setPokemon] = useState(InitialState);
+  return (
+    <>
+      <h1>Pokemon!</h1>
+      <PokemonList pokemon={pokemon} />
+    </>
+  );
 };
 
 export default App;
